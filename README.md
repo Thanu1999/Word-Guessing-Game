@@ -2,7 +2,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/Thanu1999/Word-Guessing-Game?style=social)](https://github.com/Thanu1999/Word-Guessing-Game/stargazers)
 [![GitHub issues](https://img.shields.io/github/issues/Thanu1999/Word-Guessing-Game)](https://github.com/Thanu1999/Word-Guessing-Game/issues)
-[![GitHub license](https://img.shields.io/github/license/Thanu1999/Word-Guessing-Game)](https://github.com/Thanu1999/Word-Guessing-Game/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Thanu1999/Word-Guessing-Game)](https://raw.githubusercontent.com/Thanu1999/Word-Guessing-Game/main/LICENSE)
 
 A fun and challenging word guessing game that tests your vocabulary skills. Players guess secret words, earn points, and compete on a global leaderboard.
 
