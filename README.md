@@ -91,7 +91,7 @@ Add these dependencies to your app/build.gradle:
 
 ### Network Operations
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Thanu1999/Word-Guessing-Game/main/screenshots/Network_Operations.svg" width="500" alt="Network_Operations">
+  <img src="https://raw.githubusercontent.com/Thanu1999/Word-Guessing-Game/main/Diagram/Network_Operations.svg" width="500" alt="Network_Operations">
 </p>
 
 ### Data Models
