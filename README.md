@@ -7,9 +7,9 @@
 A fun and challenging word guessing game that tests your vocabulary skills. Players guess secret words, earn points, and compete on a global leaderboard.
 
 <p align="center">
-  <img src="https://via.placeholder.com/300x600?text=Game+Screenshot+1" width="200">
-  <img src="https://via.placeholder.com/300x600?text=Game+Screenshot+2" width="200">
-  <img src="https://via.placeholder.com/300x600?text=Leaderboard+Screenshot" width="200">
+  <img src="https://raw.githubusercontent.com/Thanu1999/Word-Guessing-Game/main/screenshots/main.png" width="200" alt="Main Screen">
+  <img src="https://raw.githubusercontent.com/Thanu1999/Word-Guessing-Game/main/screenshots/game.png" width="200" alt="Gameplay">
+  <img src="https://raw.githubusercontent.com/Thanu1999/Word-Guessing-Game/main/screenshots/leaderboard.png" width="200" alt="Leaderboard">
 </p>
 
 ## Features
@@ -26,13 +26,21 @@ A fun and challenging word guessing game that tests your vocabulary skills. Play
 
 ## Technical Architecture
 📂 app
+
 ├── 📄 ApiService.java - Retrofit interface for API calls
+
 ├── 📄 GameActivity.java - Core game logic and UI
+
 ├── 📄 LeaderboardActivity.java - Displays global high scores
+
 ├── 📄 MainActivity.java - Entry point and user setup
+
 ├── 📄 Prefs.java - Persistent storage manager
+
 └── 📂 models
+
 ├── 📄 RandomWordResponse.java - API response wrapper
+
 └── 📄 ThesaurusResponse.java - Synonym data structure
 
 ## Getting Started
@@ -83,7 +91,7 @@ Add these dependencies to your app/build.gradle:
 
 ### Network Operations
 <p align="center">
-  <img src="https://via.placeholder.com/300x600?text=Game+Screenshot+2" width="200">
+  <img src="https://raw.githubusercontent.com/Thanu1999/Word-Guessing-Game/main/screenshots/Network_Operations.svg" width="500" alt="Network_Operations">
 </p>
 
 ### Data Models
@@ -116,3 +124,5 @@ Add these dependencies to your app/build.gradle:
 - Gson for JSON parsing
 
 **Note**: This app requires an active internet connection to fetch words and update leaderboards.
+
+[![GitHub stars](https://img.shields.io/github/forks/Thanu1999/Word-Guessing-Game?style=social)](https://github.com/Thanu1999/Word-Guessing-Game/forks)
