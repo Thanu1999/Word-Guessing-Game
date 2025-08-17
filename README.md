@@ -64,7 +64,7 @@ A fun and challenging word guessing game that tests your vocabulary skills. Play
    API_NINJAS_KEY="your_api_ninjas_key"
    DREAMLO_PUBLIC_CODE="your_dreamlo_public_code"
    DREAMLO_PRIVATE_CODE="your_dreamlo_private_code"
-   Build and run on emulator or device
+ Build and run on emulator or device
 
 ### Configuration
 
