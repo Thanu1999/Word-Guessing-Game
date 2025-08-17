@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">api.api-ninjas.com</domain>
+        <domain includeSubdomains="true">dreamlo.com</domain>
+        <domain includeSubdomains="true">api-ninjas.com</domain>
+    </domain-config>
+    <!-- For Android 9+ -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

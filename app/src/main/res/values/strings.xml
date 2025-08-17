@@ -1,0 +1,62 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">WGS</string>
+    <string name="word_guessing_game">Word Guessing Game</string>
+    <string name="word_guessing_game1">Word Guessing Game</string>
+
+    <!-- Game UI Components -->
+    <string name="enter_guess">Enter your guess</string>
+    <string name="submit_guess">Submit Guess</string>
+    <string name="check">Check</string>
+    <string name="continue_game">Continue Game</string>
+
+    <!-- Game State & Progress -->
+    <string name="score">Score: %d</string>
+    <string name="attempts">Attempts: %d</string>
+    <string name="time">Time: %ds</string>
+    <string name="final_score">Final Score: %d</string>
+
+    <!-- Results & Messages -->
+    <string name="correct_guess">Correct Guess</string>
+    <string name="success_message">Correct! The word was %1$s\nTime: %2$d seconds</string>
+    <string name="game_over">Game Over!</string>
+    <string name="username_missing">Please set a username first!</string>
+    <string name="using_fallback_word">Using reliable word</string>
+
+    <!-- Hint Features -->
+    <string name="check_letter">Check Letter (Cost: 5)</string>
+    <string name="letter_prompt">Enter a letter to check</string>
+    <string name="letter_result">%1$s appears %2$d times</string>
+    <string name="checked_letters">Checked letters:</string>
+    <string name="check_length_cost_5">Check Length (Cost: 5)</string>
+    <string name="word_length">Word has %d letters</string>
+    <string name="request_tip">Get Synonym Hint \n(Cost: 10)</string>
+    <string name="tip_available">Need help? Unlocked after 5 attempts!</string>
+    <string name="synonym_hint">Hint: %1$s</string>
+    <string name="no_synonyms_found">No synonyms available</string>
+    <string name="synonym_error">Failed to get hint</string>
+    <string name="_10_points">-10 points</string>
+    <string name="not_enough_points">Not enough points!</string>
+
+    <!-- Navigation & Menus -->
+    <string name="start_new_game">Start New Game</string>
+    <string name="new_game">New Game</string>
+    <string name="view_leaderboard">View Leaderboard</string>
+    <string name="medium">Medium</string>
+
+    <!-- Leaderboard -->
+    <string name="leaderboard_title">Leaderboard</string>
+    <string name="leaderboard_content_description">List of top players and their scores</string>
+    <string name="no_leaderboard_entries">No entries yet. Start playing to climb the leaderboard!</string>
+    <string name="leaderboard_fail">Failed to load leaderboard</string>
+
+    <!-- Leaderboard Table Headers -->
+    <string name="rank">Rank</string>
+    <string name="rank_header">Rank</string>
+    <string name="player_name">Player Name</string>
+    <string name="name_header">Player</string>
+    <string name="player_score">Player Score</string>
+    <string name="score_header">Score</string>
+    <string name="game_duration">Game Duration</string>
+    <string name="time_header">Time</string>
+</resources>

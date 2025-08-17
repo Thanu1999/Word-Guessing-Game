@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:padding="16dp">
+
+    <!-- Header for Leaderboard -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvLeaderboardTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/leaderboard_title"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+        android:textColor="@color/on_surface_color"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Title Row for Column Headers -->
+    <LinearLayout
+        android:id="@+id/leaderboardHeaderRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/surface_color"
+        app:layout_constraintTop_toBottomOf="@id/tvLeaderboardTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface_color"
+            android:textSize="14sp"
+            android:text="@string/rank_header"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface_color"
+            android:textSize="14sp"
+            android:text="@string/name_header"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface_color"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:text="@string/score_header"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface_color"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:text="@string/time_header"/>
+    </LinearLayout>
+
+    <!-- Leaderboard RecyclerView  -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="@string/leaderboard_content_description"
+        android:importantForAccessibility="yes"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/leaderboardHeaderRow"
+        tools:listitem="@layout/item_leaderboard" />
+
+    <!-- Empty State View -->
+    <LinearLayout
+        android:id="@+id/emptyStateLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_empty_leaderboard"
+            app:tint="@color/icon_neutral_light"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/no_leaderboard_entries"
+            android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+            android:textColor="@color/icon_neutral_dark"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

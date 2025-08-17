@@ -1,0 +1,39 @@
+<resources>
+    <!-- Base application theme -->
+    <style name="Theme.WordGuessingGame" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer</item>
+
+        <!-- Surface colors -->
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+
+        <!-- Error colors -->
+        <item name="colorError">@color/colorError</item>
+        <item name="colorErrorContainer">@color/colorErrorContainer</item>
+
+        <!-- Component styles -->
+        <item name="materialButtonStyle">@style/Widget.WordGuessingGame.Button</item>
+        <item name="textInputStyle">@style/Widget.WordGuessingGame.TextInputLayout</item>
+    </style>
+
+    <!-- Custom Button Style -->
+    <style name="Widget.WordGuessingGame.Button" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <!-- Text Input Style -->
+    <style name="Widget.WordGuessingGame.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+    </style>
+</resources>

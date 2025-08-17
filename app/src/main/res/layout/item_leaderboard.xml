@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/surface_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPosition"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/primary_color"
+            android:textSize="18sp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/rank"
+            tools:text="#1"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_weight="0.4"
+            android:layout_height="wrap_content"
+            android:textColor="@color/on_surface_color"
+            android:textSize="16sp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/player_name"
+            tools:text="Player Name"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvScore"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/icon_success"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/player_score"
+            tools:text="1000 pts"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTime"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="wrap_content"
+            android:textColor="@color/icon_neutral"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/game_duration"
+            tools:text="5:30"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

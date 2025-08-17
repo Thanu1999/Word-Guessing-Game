@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#E9DFFF</color>
+    <color name="colorOnPrimaryContainer">#21005E</color>
+    <color name="primary_color_light">#336200EE</color>
+
+    <!-- Secondary Colors -->
+    <color name="colorSecondary">#0066CC</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSecondaryContainer">#D0E4FF</color>
+    <color name="colorOnSecondaryContainer">#001D36</color>
+    <color name="on_secondary_container">#1D192B</color>
+    <color name="secondary_color_light">#330066CC</color>
+
+    <!-- Tertiary Colors -->
+    <color name="colorTertiary">#00897B</color>
+    <color name="colorOnTertiary">#FFFFFF</color>
+    <color name="colorTertiaryContainer">#B2DFDB</color>
+    <color name="colorOnTertiaryContainer">#002019</color>
+    <color name="on_tertiary_color">#FFFFFF</color>
+    <color name="tertiary_container">#FFD8E4</color>
+    <color name="on_tertiary_container">#31111D</color>
+    <color name="tertiary_color_light">#3300897B</color>
+
+    <!-- Error Colors -->
+    <color name="colorError">#B00020</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorErrorContainer">#FFDAD6</color>
+    <color name="colorOnErrorContainer">#410002</color>
+    <color name="error_color">#B3261E</color>
+    <color name="on_error_color">#FFFFFF</color>
+    <color name="error_container">#F9DEDC</color>
+    <color name="on_error_container">#410E0B</color>
+
+    <!-- Surface Colors -->
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#1C1B1F</color>
+    <color name="colorSurfaceVariant">#E7E0EB</color>
+    <color name="colorOnSurfaceVariant">#49454E</color>
+    <color name="colorSurfacecode">#FEFBFF</color>
+    <color name="surface_variant">#E7E0EC</color>
+    <color name="on_surface_variant">#49454F</color>
+
+    <!-- Background Colors -->
+    <color name="colorBackground">#FAFAFA</color>
+    <color name="colorOnBackground">#1C1B1F</color>
+    <color name="background_start">#F8F9FA</color>
+    <color name="background_end">#E9ECEF</color>
+
+    <!-- Icon Colors -->
+    <color name="icon_primary">#6750A4</color>
+    <color name="icon_primary_light">#9D7CFF</color>
+    <color name="icon_primary_dark">#4B2FAE</color>
+    <color name="icon_neutral">#49454F</color>
+    <color name="icon_neutral_light">#79747E</color>
+    <color name="icon_neutral_dark">#1C1B1F</color>
+    <color name="icon_success">#34C759</color>
+    <color name="icon_success_light">#48E161</color>
+    <color name="icon_success_dark">#2AAD4B</color>
+    <color name="icon_warning">#FF9500</color>
+    <color name="icon_warning_light">#FFB84D</color>
+    <color name="icon_warning_dark">#CC7700</color>
+    <color name="icon_error">#FF3B30</color>
+    <color name="icon_error_light">#FF6961</color>
+    <color name="icon_error_dark">#CC0000</color>
+    <color name="icon_info">#007AFF</color>
+    <color name="icon_info_light">#5AC8FA</color>
+    <color name="icon_info_dark">#0056B3</color>
+    <color name="icon_disabled">#CCCCCC</color>
+    <color name="icon_disabled_dark">#999999</color>
+
+    <!-- Utility Colors -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="outline_color">#79747E</color>
+    <color name="colorOutline">#79747E</color>
+    <color name="accent_color">#FF6D00</color>
+    <color name="highlight_color">#E1BEE7</color>
+    <color name="card_stroke">#1A000000</color>
+
+    <!-- Input Colors -->
+    <color name="input_background">#FAFAFA</color>
+    <color name="input_stroke">@color/colorPrimary</color>
+
+    <!-- Mapping for Layout Files -->
+    <color name="background_color">@color/colorBackground</color>
+    <color name="on_background_color">@color/colorOnBackground</color>
+    <color name="surface_color">@color/colorSurface</color>
+    <color name="on_surface_color">@color/colorOnSurface</color>
+    <color name="primary_color">@color/colorPrimary</color>
+    <color name="on_primary_color">@color/colorOnPrimary</color>
+    <color name="primary_container">@color/colorPrimaryContainer</color>
+    <color name="on_primary_container">@color/colorOnPrimaryContainer</color>
+    <color name="secondary_color">@color/colorSecondary</color>
+    <color name="on_secondary_color">@color/colorOnSecondary</color>
+    <color name="tertiary_color">@color/colorTertiary</color>
+    <color name="secondary_container">@color/colorSecondaryContainer</color>
+</resources>

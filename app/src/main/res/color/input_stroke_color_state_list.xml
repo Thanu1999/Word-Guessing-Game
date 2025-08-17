@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Focused state -->
+    <item android:color="@color/colorPrimary" android:state_focused="true" />
+    <!-- Error state -->
+    <item android:color="@color/colorError" android:state_enabled="true" android:state_hovered="true" />
+    <!-- Disabled state -->
+    <item android:color="@color/colorSurfaceVariant" android:state_enabled="false" />
+    <!-- Default state -->
+    <item android:color="@color/colorOutline" />
+</selector>

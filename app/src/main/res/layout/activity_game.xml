@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Header Section with improved elevation and rounded corners -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/rounded_text_background"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/actionButtonsCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerCard">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputLayoutGuess"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="@string/enter_guess"
+            app:boxBackgroundColor="@color/input_background"
+            app:boxStrokeColor="@color/input_stroke_color_state_list"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            app:counterTextColor="@color/secondary_color"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/primary_color"
+            app:hintTextColor="@color/primary_color">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGuess"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:inputType="textCapCharacters"
+                android:letterSpacing="0.1"
+                android:maxLength="20"
+                android:textColor="@color/on_surface_color"
+                android:textColorHighlight="@color/highlight_color"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitGuess"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:onClick="onSubmitGuess"
+            android:text="@string/submit_guess"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/primary_color"
+            app:cornerRadius="12dp"
+            app:elevation="4dp"
+            app:icon="@drawable/ic_submit"
+            app:iconGravity="textStart"
+            app:iconSize="24dp"
+            app:iconTint="@color/on_primary_color" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/headerCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/surface_color"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/card_stroke"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <!-- Score Section with enhanced visuals -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_background"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_score"
+                    app:tint="@color/primary_color" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvScore"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center|top"
+                    android:textColor="@color/on_surface_color"
+                    android:textStyle="bold"
+                    tools:text="Score: 100" />
+            </LinearLayout>
+
+            <!-- Timer Section with enhanced visuals -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_background"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_timer"
+                    app:tint="@color/secondary_color" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTimer"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center|top"
+                    android:textColor="@color/on_surface_color"
+                    android:textStyle="bold"
+                    tools:text="Time: 0s" />
+            </LinearLayout>
+
+            <!-- Attempts Section with enhanced visuals -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/circle_background"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_attempts"
+                    app:tint="@color/tertiary_color" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAttempts"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center|top"
+                    android:textColor="@color/on_surface_color"
+                    android:textStyle="bold"
+                    tools:text="Attempts: 10" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Input Section with improved styling -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/inputCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/surface_color"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerCard"
+        app:strokeColor="@color/card_stroke"
+        app:strokeWidth="1dp"/>
+
+    <!-- Action Buttons with improved styling -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/actionButtonsCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginBottom="16dp"
+        app:cardBackgroundColor="@color/surface_color"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:strokeColor="@color/card_stroke"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:id="@+id/actionButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#04FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCheckLetter"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:onClick="onCheckLetter"
+                android:text="@string/check_letter"
+                android:textAlignment="center"
+                android:textColor="@color/secondary_color"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_check_letter"
+                app:iconGravity="textStart"
+                app:iconSize="30dp"
+                app:iconTint="@color/secondary_color"
+                app:strokeColor="@color/secondary_color"
+                app:strokeWidth="2dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWordLength"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:onClick="onWordLength"
+                android:text="@string/check_length_cost_5"
+                android:textAlignment="center"
+                android:textColor="@color/tertiary_color"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_word_length"
+                app:iconGravity="textStart"
+                app:iconSize="27dp"
+                app:iconTint="@color/tertiary_color"
+                app:strokeColor="@color/tertiary_color"
+                app:strokeWidth="2dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Checked Letters Display with improved styling -->
+
+    <!-- Permanent Displays with improved styling -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/checkedLettersCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="3dp"
+        app:cardBackgroundColor="@color/surface_color"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTip"
+        app:layout_constraintVertical_bias="0.208"
+        app:strokeColor="@color/card_stroke"
+        app:strokeWidth="1dp">
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvWordLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/rounded_text_background"
+        android:padding="12dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:textColor="@color/tertiary_color"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/tvSynonymHint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:text="Word Length: 7"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTip"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onRequestTip"
+        android:text="@string/request_tip"
+        android:textColor="@color/accent_color"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:backgroundTint="@color/primary_container"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/ic_tip"
+        app:iconGravity="textStart"
+        app:iconSize="30dp"
+        app:iconTint="@color/accent_color"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionButtonsCard"
+        app:layout_constraintWidth_percent="1"
+        app:strokeColor="@color/accent_color"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSynonymHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounded_text_background"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:textColor="@color/accent_color"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWordLength"
+        app:layout_constraintWidth_percent="0.9"
+        tools:text="Hint: example"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_text_background"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvWordLength"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTip">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCheckedLetters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="@color/secondary_color"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:text="Checked letters: a(2), b(1)" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
